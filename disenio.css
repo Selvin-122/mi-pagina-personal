@@ -1,0 +1,158 @@
+/* ======= Reset básico ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======= Colores base ======= */
+:root {
+  --azul-base: #2c7be5;
+  --azul-claro: #cce5ff;
+  --azul-oscuro: #1b4f72;
+  --verde-alegre: #28a745;
+  --fondo: #f0f8ff;
+  --texto: #333;
+}
+
+/* ======= Estilo general ======= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--azul-base);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ======= Imagen circular centrada ======= */
+section img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  border: 4px solid var(--azul-base);
+}
+
+/* ======= Contenedor con Grid para listas ======= */
+.contenedor-listas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: var(--azul-oscuro);
+  margin-bottom: 10px;
+}
+
+/* ======= Listas con estilo ======= */
+ul {
+  background-color: var(--azul-claro);
+  padding: 15px;
+  border-radius: 10px;
+  list-style: square inside;
+  color: var(--azul-oscuro);
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* ======= Enlace de video ======= */
+section a {
+  color: var(--verde-alegre);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+/* ======= Formulario con Flexbox ======= */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid var(--azul-base);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--azul-oscuro);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--azul-base);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: var(--azul-oscuro);
+}
+
+/* ======= Responsive: Estilos móviles ======= */
+@media (max-width: 600px) {
+  header {
+    font-size: 0.9rem;
+    padding: 20px 10px;
+  }
+
+  section img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contenedor-listas {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

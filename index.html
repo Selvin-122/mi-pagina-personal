@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título que se muestra en la pestaña del navegador -->
+  <title>Mi Página Personal</title>
+  <!-- Enlace a una hoja de estilo externa -->
+  <link rel="stylesheet" href="disenio.css">
+  <style>
+    /* Estilos básicos para el cuerpo de la página */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Centra el contenido del encabezado */
+    header {
+      text-align: center;
+    }
+
+    /* Estilo de la imagen de perfil */
+    img {
+      max-width: 200px;
+      border-radius: 50%; /* Hace la imagen circular */
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* Espaciado entre secciones */
+    section {
+      margin-bottom: 30px;
+    }
+
+    /* Estilo de listas */
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    /* Estilo para el formulario de contacto */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Estilos para los campos de entrada del formulario */
+    form input, form textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 1em;
+    }
+
+    /* Estilo del botón de envío */
+    form button {
+      padding: 10px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado principal con nombre y mensaje de bienvenida -->
+  <header>
+    <h1>Hola, soy Selvin Alexis Ismael</h1>
+    <p>Bienvenido a mi página personal</p>
+  </header>
+
+  <!-- Sección con una imagen personal -->
+  <section>
+    <img src="Imagenes/foto-perfil.jpeg" alt="Mi fotografía">
+  </section>
+
+  <!-- Sección donde se listan los intereses personales -->
+  <section>
+    <h2>Mis intereses</h2>
+    <ul>
+      <li>Tecnología</li>
+      <li>Viajes</li>
+      <li>Videojuegos</li>
+      <li>Música</li>
+    </ul>
+  </section>
+
+  <!-- Sección donde se muestran las habilidades del autor -->
+  <section>
+    <h2>Mis habilidades</h2>
+    <ul>
+      <li>HTML y CSS</li>
+      <li>Tocar un instrumento</li>
+      <li>dibujar</li>
+      <li>Aprendizaje rapido</li>
+    </ul>
+  </section>
+
+  <!-- Sección que incrusta un video de YouTube -->
+  <section>
+    <h2>Video favorito</h2>
+    <div class="video-responsive">
+      <iframe src="https://www.youtube.com/embed/fM1oiO8I8vA?si=iTozFffzR7_BKzKB"  
+              frameborder="0" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto con campos de nombre, email y mensaje -->
+  <section>
+    <h2>Formulario de contacto</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>
+
